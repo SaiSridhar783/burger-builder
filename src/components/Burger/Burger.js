@@ -16,7 +16,7 @@ const burger = (props) => {
             return arr.concat(elem);
         }, []);  //providing default value of arr as []
 
-    console.log(transformedIngredients)
+    //console.log(transformedIngredients)
     if (transformedIngredients.length===0) {
         transformedIngredients = <p>Please Start adding Ingredients</p>;
     }
