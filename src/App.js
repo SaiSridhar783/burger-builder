@@ -1,13 +1,12 @@
-import classes from './App.module.css';
-import React, {Component} from 'react';
-import Layout from './components/Layouts/Layouts';
+import React, { Component } from 'react';
+
+import Layout from './hoc/Layout/Layout';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 
-
-class App extends Component{
-  render(){
+class App extends Component {
+  render () {
     return (
-      <div className={classes.App}>
+      <div>
         <Layout>
           <BurgerBuilder />
         </Layout>
@@ -15,6 +14,5 @@ class App extends Component{
     );
   }
 }
-
 
 export default App;
