@@ -37,7 +37,7 @@ class ContactData extends Component{
                 this.props.history.push('/');
             } )
             .catch( error => {
-                this.setState( { loading: false } );
+                this.setState( { loading: false } ); 
             } );
     }
 
