@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Aux from '../../../hoc/Auxi';
 import Button from '../../UI/Button/Button';
+//import {NavLink} from 'react-router-dom';
 
 class OrderSummary extends Component {
     // This could be a functional component, doesn't have to be a class
@@ -29,6 +30,9 @@ class OrderSummary extends Component {
                 <p>Continue to Checkout?</p>
                 <Button btnType="Danger" clicked={this.props.purchaseCancelled}>CANCEL</Button>
                 <Button btnType="Success" clicked={this.props.purchaseContinued}>CONTINUE</Button>
+                {/* <NavLink to="/checkout">
+                    <Button btnType="Success" clicked={this.props.purchaseContinued}>CONTINUE</Button>
+                </NavLink> */}
             </Aux>
         );
     }
