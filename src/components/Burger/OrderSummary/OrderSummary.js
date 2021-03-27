@@ -1,8 +1,7 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
-//import Aux from '../../../hoc/Auxi';
-//import Button from '../../UI/Button/Button';
-//import {NavLink} from 'react-router-dom';
+import Aux from '../../../hoc/Auxi';
+import Button from '../../UI/Button/Button';
 
 class OrderSummary extends Component {
     // This could be a functional component, doesn't have to be a class
@@ -20,7 +19,7 @@ class OrderSummary extends Component {
             } );
 
         return (
-            <Fragment>
+            <Aux>
                 <h3>Your Order</h3>
                 <p>A delicious burger with the following ingredients:</p>
                 <ul>
@@ -28,12 +27,9 @@ class OrderSummary extends Component {
                 </ul>
                 <p><strong>Total Price: {this.props.price.toFixed( 2 )}</strong></p>
                 <p>Continue to Checkout?</p>
-                <button className="btn btn-danger mr-3" onClick={this.props.purchaseCancelled}>CANCEL</button>
-                <button className="btn btn-success" onClick={this.props.purchaseContinued}>CONTINUE</button>
-                {/* <NavLink to="/checkout">
-                    <Button btnType="Success" clicked={this.props.purchaseContinued}>CONTINUE</Button>
-                </NavLink> */}
-            </Fragment>
+                <Button btnType="Danger" clicked={this.props.purchaseCancelled}>CANCEL</Button>
+                <Button btnType="Success" clicked={this.props.purchaseContinued}>CONTINUE</Button>
+            </Aux>
         );
     }
 }
