@@ -19,15 +19,9 @@ const BurgerBuilder = props => {
 
   const dispatch = useDispatch();
 
-  const ings = useSelector(state => {
-    return state.burgerBuilder.ingredients;
-  });
-  const price = useSelector(state => {
-    return state.burgerBuilder.totalPrice;
-  });
-  const error = useSelector(state => {
-    return state.burgerBuilder.error;
-  });
+  const ings = useSelector(state => state.burgerBuilder.ingredients);
+  const price = useSelector(state => state.burgerBuilder.totalPrice);
+  const error = useSelector(state => state.burgerBuilder.error);
   const isAuthenticated = useSelector(state => {
     return state.auth.token !== null;
   });
