@@ -33,6 +33,8 @@
     padding: 10px;
     font-weight: bold;
     width: 80px;
+    text-transform: uppercase;
+    
 }
 
 .BuildControl .Less {  
@@ -41,7 +43,7 @@
 }
 
 .BuildControl .More {
-    background-color: #8F5E1E;
+    background-color: #b8741b;
     color: white;
 }
 
